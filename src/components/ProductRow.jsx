@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ProductRow.css';
 
 class ProductRow extends Component {
   render() {

@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0 auto !important;
   padding: 0;
   font-family: sans-serif;
   max-width: 30em;
