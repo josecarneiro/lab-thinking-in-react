@@ -1,0 +1,12 @@
+table {
+  width: 75%;
+  margin: 3em auto;
+  border: lightgray;
+  text-align: center;
+  thead {
+    background-color: lightgray;
+    th {
+      padding: 1em;
+    }
+  }
+}
