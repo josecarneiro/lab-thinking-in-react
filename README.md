@@ -32,14 +32,16 @@ In the `src` folder, you will find the `data.json` file with an array of product
 Example of given data:
 
 ```json
-// ...
-{
-  "category": "Sporting Goods",
-  "price": "$49.99",
-  "stocked": true,
-  "name": "Football"
-}
-// ...
+[
+  // ...
+  {
+    "category": "Sporting Goods",
+    "price": "$49.99",
+    "stocked": true,
+    "name": "Football"
+  }
+  // ...
+]
 ```
 
 By taking a quick look at the available data, we can see that all of the products have the following fields: **category**, **price**, **stocked** and **name**, of which **stocked** holds a _boolean_ value (this information will be relevant soon). Also, bear in mind that you will not be working with the **category** field in any of the iterations of this Lab.
@@ -78,14 +80,14 @@ Now that we’ve identified the components in our app, let’s arrange them into
 
 ### Iteration 2 - Build A Static Version using React
 
-Let's first create a `components` directory in our `starter_code`, and then create our first component `<FilterableProductTable />`. This component will be a direct child of the `App` component, and will in turn have all of the other components as descendants.
+Let's first create a `components` directory in our `src` directory, and then create our first component `<FilterableProductTable />`. This component will be a direct child of the `App` component, and will in turn have all of the other components as descendants.
 
-Let's declare it and export it from `/components/FilterableProductTable`, and import it and use it in our `App.js` file. While you're at it, let's import the `data.json` file inside of `App.js` as well.
+Let's declare it and export it from `/components/FilterableProductTable.jsx`, and import it and use it in our `App.jss` file. While you're at it, let's import the `data.json` file inside of `App.jss` as well.
 
-To kick off the project, we'll give you a starter hint: this component will pass in (and down) the products from the `data.json`. So you'll have something like this in your `App.js`:
+To kick off the project, we'll give you a starter hint: this component will pass in (and down) the products from the `data.json`. So you'll have something like this in your `App.jsx`:
 
 ```jsx
-// App.js
+// App.jsx
 import React, { Component } from 'react';
 import data from './data.json';
 import FilterableProductTable from './components/FilterableProductTable';
