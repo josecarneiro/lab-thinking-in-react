@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+  margin: auto;
+  .searchBar {
+    width: 100%;
+    padding: 1.25em;
+    margin-bottom: 2em;
+  }
+}
