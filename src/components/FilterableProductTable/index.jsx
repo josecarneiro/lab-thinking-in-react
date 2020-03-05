@@ -15,7 +15,7 @@ export default class FilterableProductTable extends Component {
         <h1>
           <strong>IRON STORE</strong>
         </h1>
-        <SearchBar />
+        <SearchBar  />
         <ProductTable dataToTable={this.state.data} />
       </div>
     );

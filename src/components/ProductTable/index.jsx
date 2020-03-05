@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+
+import { Table } from 'react-bootstrap';
+
 import FilterableProductTable from './../FilterableProductTable';
 import ProductRow from './../ProductRow';
 
 export default class ProductTable extends Component {
   render() {
     return (
-      <table>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Name</th>
@@ -15,7 +18,7 @@ export default class ProductTable extends Component {
         <tbody>
           <ProductRow dataToRow={this.props.dataToTable} />
         </tbody>
-      </table>
+      </Table>
     );
   }
 }
