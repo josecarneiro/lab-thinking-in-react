@@ -8,7 +8,13 @@ import ProductRow from './../ProductRow';
 export default class ProductTable extends Component {
   render() {
     return (
-      <Table striped bordered hover>
+      <Table
+        responsive
+        striped
+        borderless
+        hover
+        style={{ color: 'rgb(107, 94, 94)' }}
+      >
         <thead>
           <tr>
             <th>Name</th>

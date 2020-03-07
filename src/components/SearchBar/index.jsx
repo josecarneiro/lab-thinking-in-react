@@ -22,6 +22,7 @@ export default class SearchBar extends Component {
       <Form>
         <Form.Group controlId="formBasicEmail">
           <input
+            className="inputSearch"
             type="search"
             placeholder="search for anything..."
             value={this.props.filterText}
@@ -29,7 +30,7 @@ export default class SearchBar extends Component {
           />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
-          <p>
+          <p className='checkBox'>
             <input
               type="checkbox"
               checked={this.props.inStockOnly}
