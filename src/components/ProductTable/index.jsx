@@ -16,7 +16,11 @@ export default class ProductTable extends Component {
           </tr>
         </thead>
         <tbody>
-          <ProductRow dataToRow={this.props.dataToTable} />
+          <ProductRow
+            dataToRow={this.props.dataToTable}
+            filterDataToRow={this.props.filterData}
+            inStockDataToRow={this.props.inStockData}
+          />
         </tbody>
       </Table>
     );

@@ -5,22 +5,16 @@ import Form from 'react-bootstrap/Form';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      query: ''
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+    this.handleInStockChange = this.handleInStockChange.bind(this);
   }
 
-  handleInputChange(event) {
-    event.preventDefault();
-    this.setState({ [event.target.name]: event.target.value });
+  handleFilterTextChange(e) {
+    this.props.onFilterTextChange(e.target.value);
   }
 
-  get filteredMeals() {
-    const filteredMeals = this.state.meals.filter(meal => {
-      return meal.name.toLowerCase().includes(this.state.query.toLowerCase());
-    });
-    return filteredMeals;
+  handleInStockChange(e) {
+    this.props.onInStockChange(e.target.checked);
   }
 
   render() {
@@ -29,14 +23,20 @@ export default class SearchBar extends Component {
         <Form.Group controlId="formBasicEmail">
           <input
             type="search"
-            name="query"
-            value={this.state.query}
             placeholder="search for anything..."
-            onChange={this.handleInputChange}
+            value={this.props.filterText}
+            onChange={this.handleFilterTextChange}
           />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <p>
+            <input
+              type="checkbox"
+              checked={this.props.inStockOnly}
+              onChange={this.handleInStockChange}
+            />{' '}
+            Only show products in stock
+          </p>
         </Form.Group>
       </Form>
     );
