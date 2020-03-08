@@ -1,0 +1,23 @@
+input {
+  font: inherit;
+  color: inherit;
+  padding: 0.5em 0.75em;
+  border: 0;
+  background-color: transparent;
+  box-shadow: 0 0 1em -0.5em rgb(88, 88, 88);
+  border-radius: 0.5em;
+  flex: 1;
+  overflow: hidden;
+
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.searchbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
